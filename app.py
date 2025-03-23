@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Symulowana baza kodów
+# Przykładowe kody starterpacków
 codes = {
     "A1B2C3": {"used": False, "user_id": 123456789012345678}
 }
@@ -18,7 +18,7 @@ def verify():
 
     codes[code]["used"] = True
 
-    print(f"SPAWN STARTERPACK FOR {nickname}")  # Tutaj później RCON
+    print(f"✅ SPAWN STARTERPACK for {nickname}")
 
     return jsonify({"message": "✅ StarterPack will be delivered shortly. Stay still!"})
 
